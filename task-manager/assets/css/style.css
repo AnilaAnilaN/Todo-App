@@ -1,0 +1,180 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+header {
+    background: linear-gradient(135deg, #6b48ff, #af69ef);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    padding: 10px 0;
+}
+
+footer {
+    background: linear-gradient(135deg, #6b48ff, #af69ef);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.list-group-item {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.list-group-item.pending {
+    background-color: #e0c4ff;
+    border-left: 5px solid #8e2de2;
+}
+
+.list-group-item.in_progress {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+}
+
+.list-group-item.done {
+    background-color: #e6f3ff;
+    border-left: 5px solid #4dabf7;
+}
+
+.list-group-item.dragging {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+}
+
+.task-title {
+    margin-right: 5px;
+}
+
+.task-description {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.view-description {
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.view-description:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.badge {
+    font-size: 0.7em;
+    padding: 0.2em 0.4em;
+}
+
+.bg-purple {
+    background-color: #8e2de2 !important;
+    color: #fff;
+}
+
+#addTaskButton {
+    background-color: #8e2de2;
+    color: #fff;
+}
+
+#addTaskButton:hover {
+    background-color: #6b48ff;
+    transform: scale(1.05);
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .list-group-item {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #addTaskButton {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-select {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .task-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .btn-edit, .btn-delete {
+        width: 100%;
+    }
+
+    .view-description {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .list-group-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .fs-5 {
+        font-size: 1rem !important;
+    }
+
+    .btn-sm {
+        font-size: 0.8rem;
+    }
+
+    .form-select {
+        max-width: 250px;
+    }
+}
